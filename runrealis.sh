@@ -25,7 +25,7 @@ echo -e "                           \e[38;5;9mFor safety reason, validator shoul
 sleep 1s
 echo -e "\e[38;5;12mTelegram: \e[38;5;11m@RasmonT \e[38;5;14mDiscord: \e[38;5;11mRasmonT#9018"
 echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/YRjpPW2jz4"
-echo -e "\e[38;5;82mIf you have any questions, or need assistance, please message me!"
+echo -e "\e[38;5;82mIf you have any questions, or need assistance, please message me! \e[39m"
 exit 1
 else
 echo -e "                           \e[38;5;82mProceeding... \e[39m"
@@ -137,7 +137,7 @@ sleep 1s
 echo -e "                           \e[38;5;82mKeys Generated... \e[39m"
 echo -e "\e[38;5;12mTelegram: \e[38;5;11m@RasmonT \e[38;5;14mDiscord: \e[38;5;11mRasmonT#9018"
 echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/YRjpPW2jz4"
-echo -e "\e[38;5;82mIf you have any questions, or need assistance, please message me!"
+echo -e "\e[38;5;82mIf you have any questions, or need assistance, please message me! \e[39m"
 sleep 2s
 fi
 
