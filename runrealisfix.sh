@@ -133,7 +133,7 @@ if [[ $DOSETUP =~ "y" ]] ; then
 echo -e "                           \e[38;5;82mGenerating keys... \e[39m"
 rm -rf $HOME/runrealis.sh
 sleep 3s
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9934
 sleep 1s
 echo -e "                           \e[38;5;82mKeys Generated... \e[39m"
 echo -e "\e[38;5;12mTelegram: \e[38;5;11m@RasmonT \e[38;5;14mDiscord: \e[38;5;11mRasmonT#9018"
