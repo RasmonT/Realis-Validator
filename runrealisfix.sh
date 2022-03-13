@@ -91,6 +91,8 @@ timedatectl set-ntp true
 sudo apt install htop
 sudo apt install ccze
 sudo apt install git
+rustup install nightly-2022-03-03
+rustup target add wasm32-unknown-unknown --toolchain nightly-2022-03-03
 echo -e "                           \e[38;5;208mDownloading Realis... \e[39m"
 sleep 2s
 
@@ -100,8 +102,6 @@ sleep 1s
 cd Realis.Network
 git tag -l | sort -V | grep -v -- '-rc'
 sleep 1s
-rustup install nightly-2021-08-30
-rustup target add wasm32-unknown-unknown --toolchain nightly-2021-08-30
 cargo build --release
 echo -e "                           \e[38;5;82mStarting validator... \e[39m"
 sleep 2s
