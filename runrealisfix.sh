@@ -24,7 +24,7 @@ echo -e "                           \e[38;5;9mFor safety reason, validator shoul
 echo -e "                           \e[38;5;82mBut installation will continue as a root user \e[39m"
 sleep 1s
 echo -e "\e[38;5;12mTelegram: \e[38;5;11m@RasmonT \e[38;5;14mDiscord: \e[38;5;11mRasmonT#9018"
-echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/YRjpPW2jz4"
+echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/realis"
 echo -e "\e[38;5;82mIf you have any questions, or need assistance, please message me! \e[39m"
 sleep 1s
 echo -e "                           \e[38;5;82mProceeding... \e[39m"
@@ -122,10 +122,10 @@ if [[ $DOSETUP =~ "n" ]] ; then
 echo -e "                           \e[38;5;11mCanceling session key generation... \e[39m"
 rm -rf $HOME/runrealis.sh
 sleep 2s      
-echo -e "\e[38;5;82mPlease use curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933 to generate keys \e[39m"
+echo -e "\e[38;5;82mPlease use curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9934 to generate keys \e[39m"
 sleep 1s
 echo -e "\e[38;5;12mTelegram: \e[38;5;11m@RasmonT \e[38;5;14mDiscord: \e[38;5;11mRasmonT#9018"
-echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/YRjpPW2jz4"
+echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/realis"
 echo -e "\e[38;5;82mIf you have any questions, or need assistance, please message me!"
 sleep 2s
 fi
@@ -134,11 +134,11 @@ if [[ $DOSETUP =~ "y" ]] ; then
 echo -e "                           \e[38;5;82mGenerating keys... \e[39m"
 rm -rf $HOME/runrealis.sh
 sleep 3s
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9934
 sleep 1s
 echo -e "                           \e[38;5;82mKeys Generated... \e[39m"
 echo -e "\e[38;5;12mTelegram: \e[38;5;11m@RasmonT \e[38;5;14mDiscord: \e[38;5;11mRasmonT#9018"
-echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/YRjpPW2jz4"
+echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/realis"
 echo -e "\e[38;5;82mIf you have any questions, or need assistance, please message me! \e[39m"
 sleep 2s
 fi
