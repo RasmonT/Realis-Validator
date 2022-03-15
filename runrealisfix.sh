@@ -91,8 +91,6 @@ timedatectl set-ntp true
 sudo apt install htop
 sudo apt install ccze
 sudo apt install git
-rustup install nightly-2022-03-03
-rustup target add wasm32-unknown-unknown --toolchain nightly-2022-03-03
 echo -e "                           \e[38;5;208mDownloading Realis... \e[39m"
 sleep 2s
 
@@ -100,8 +98,11 @@ sleep 2s
 git clone https://github.com/RealisNetwork/Realis.Network.git
 sleep 1s
 cd Realis.Network
-git tag -l | sort -V | grep -v -- '-rc'
+# git tag -l | sort -V | grep -v -- '-rc'
+git checkout prod
 sleep 1s
+rustup install nightly-2021-08-30
+rustup target add wasm32-unknown-unknown --toolchain nightly-2021-08-30
 cargo build --release
 echo -e "                           \e[38;5;82mStarting validator... \e[39m"
 sleep 2s
@@ -124,7 +125,7 @@ sleep 2s
 echo -e "\e[38;5;82mPlease use curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933 to generate keys \e[39m"
 sleep 1s
 echo -e "\e[38;5;12mTelegram: \e[38;5;11m@RasmonT \e[38;5;14mDiscord: \e[38;5;11mRasmonT#9018"
-echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/realis"
+echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/YRjpPW2jz4"
 echo -e "\e[38;5;82mIf you have any questions, or need assistance, please message me!"
 sleep 2s
 fi
@@ -133,11 +134,11 @@ if [[ $DOSETUP =~ "y" ]] ; then
 echo -e "                           \e[38;5;82mGenerating keys... \e[39m"
 rm -rf $HOME/runrealis.sh
 sleep 3s
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9934
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 sleep 1s
 echo -e "                           \e[38;5;82mKeys Generated... \e[39m"
 echo -e "\e[38;5;12mTelegram: \e[38;5;11m@RasmonT \e[38;5;14mDiscord: \e[38;5;11mRasmonT#9018"
-echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/realis"
+echo -e "\e[38;5;12mTelegram Chat: \e[38;5;11m@RealisENG \e[38;5;14mDiscord: \e[38;5;11mhttps://discord.gg/YRjpPW2jz4"
 echo -e "\e[38;5;82mIf you have any questions, or need assistance, please message me! \e[39m"
 sleep 2s
 fi
@@ -151,7 +152,7 @@ echo -e "-----------------------------------------------------------------------
 echo -e "\e[38;5;82mUse this command to see your validator processing blocks."
 echo -e "\e[38;5;45mjournalctl -u validator -f -q  | ccze -A -o nolookups"
 echo -e "\e[38;5;11mYou can leave block session anytime by pressing \e[38;5;1mctrl-c \e[39m"
-sleep 3s
+sleep 1s
 trap ctrl_c INT
 
 #Fix 
