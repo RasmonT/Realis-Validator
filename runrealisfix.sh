@@ -157,7 +157,7 @@ trap ctrl_c INT
 
 #Fix 
 sudo systemctl stop validator
-sleep 1s
+sleep 3s
 echo -e "\e[38;5;82mStopping validator... \e[39m"
 cd $HOME
 echo -e "\e[38;5;82mDownloading realis.json file... \e[39m"
