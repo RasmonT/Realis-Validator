@@ -152,6 +152,7 @@ echo -e "-----------------------------------------------------------------------
 echo -e "\e[38;5;82mUse this command to see your validator processing blocks."
 echo -e "\e[38;5;45mjournalctl -u validator -f -q  | ccze -A -o nolookups"
 echo -e "\e[38;5;11mYou can leave block session anytime by pressing \e[38;5;1mctrl-c \e[39m"
+sudo systemctl enable validator
 sleep 1s
 trap ctrl_c INT
 
