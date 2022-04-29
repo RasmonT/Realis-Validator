@@ -102,6 +102,7 @@ cd Realis.Network
 git checkout prod
 sleep 1s
 rustup install nightly-2021-10-20
+rustup default nightly-2021-10-20
 rustup target add wasm32-unknown-unknown --toolchain nightly-2021-10-20
 cargo build --release
 echo -e "                           \e[38;5;82mStarting validator... \e[39m"
