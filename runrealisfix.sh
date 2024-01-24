@@ -120,7 +120,7 @@ echo "Do you want me to generate session keys?[y/n]"
 read DOSETUP
 
 if [[ $DOSETUP =~ "n" ]] ; then
-echo -e "                           \e[38;5;11mCanceling session key generation... \e[39m"
+echo -e "                           \e[38;5;11mCanceling the session key generation... \e[39m"
 rm -rf $HOME/runrealis.sh
 sleep 2s      
 echo -e "\e[38;5;82mPlease use curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9934 to generate keys \e[39m"
